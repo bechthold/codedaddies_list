@@ -4,47 +4,21 @@
     <h2 style="text-align: center">{{ search | title }}</h2>
 
     <div class="row">
+    {% for post in final_postings %}
         <div class="col s4">
             <div class="card">
                 <div class="card-image">
-                    <a href="/"><img src="https://lh3.googleusercontent.com/proxy/QBhHbFzyuN9j_Nd19T70to5Vlqi0jUPgBJbcGQ8m3Nx1nVu6s84hqFpXrU1g1XWgGK9Z87GzzFI90Ttx2QvqeslYgDSkAxJEU7Uob-HnNx5bnLKms9XGv3R3jnQRoQ7TDjHf1jcyQIo3MMBVRWwPIJ18HI0J9RZbrxZ_07ad4SZ3aT3wTYt2Y9Q" alt=""></a>
+                    <a href="{{ post.1 }}"><img src="{{ post.3 }}" alt=""></a>
                 </div>
                 <div class="card-content">
-                    <p>TEST</p>
+                    <p>{{ post.0 }}</p>
                 </div>
                 <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
+                    <a href="{{ post.1 }}">VIEW LISTING: PRICE {{ post.2 }}</a>
                 </div>
             </div>
         </div>
-
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://lh3.googleusercontent.com/proxy/QBhHbFzyuN9j_Nd19T70to5Vlqi0jUPgBJbcGQ8m3Nx1nVu6s84hqFpXrU1g1XWgGK9Z87GzzFI90Ttx2QvqeslYgDSkAxJEU7Uob-HnNx5bnLKms9XGv3R3jnQRoQ7TDjHf1jcyQIo3MMBVRWwPIJ18HI0J9RZbrxZ_07ad4SZ3aT3wTYt2Y9Q" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>TEST</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s4">
-            <div class="card">
-                <div class="card-image">
-                    <a href="/"><img src="https://lh3.googleusercontent.com/proxy/QBhHbFzyuN9j_Nd19T70to5Vlqi0jUPgBJbcGQ8m3Nx1nVu6s84hqFpXrU1g1XWgGK9Z87GzzFI90Ttx2QvqeslYgDSkAxJEU7Uob-HnNx5bnLKms9XGv3R3jnQRoQ7TDjHf1jcyQIo3MMBVRWwPIJ18HI0J9RZbrxZ_07ad4SZ3aT3wTYt2Y9Q" alt=""></a>
-                </div>
-                <div class="card-content">
-                    <p>TEST</p>
-                </div>
-                <div class="card-action">
-                    <a href="/">View listing: Price Test Price</a>
-                </div>
-            </div>
-        </div>
+    {% endfor %}
     </div>
 
 {% endblock content %}
